@@ -1,0 +1,122 @@
+.contact-us {
+  text-align: center;
+  margin: 50px auto 0 auto; /* Aumento el margen superior a 50px */
+  max-width: 600px;
+  animation: fadeIn 1s forwards;
+  view-timeline: --scroll;
+  animation-timeline: --scroll;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  width: 200px;
+  height: auto;
+}
+
+.page-title {
+  font-size: 1.26em; /* 1.8em * 0.7 = 1.26em */
+  text-transform: uppercase; /* Hace el texto en mayúsculas */
+  color: #118dbe; /* Color de contáctanos */
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Asegura que todo esté centrado verticalmente */
+  margin-bottom: 20px;
+  position: relative; /* Necesario para posicionar correctamente la línea */
+  height: 100px; /* Asegura que haya suficiente altura para mostrar la línea */
+}
+
+.contact-left,
+.contact-right {
+  width: 45%;
+  padding: 10px;
+}
+
+.contact-separator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 60%; /* Hace la línea un poco más larga */
+  width: 1px; /* Línea vertical más delgada */
+  background-color: #118dbe; /* Línea separadora con el color del texto */
+  transform: translateX(-50%); /* Centra la línea verticalmente */
+}
+
+.contact-title {
+  font-size: 0.84em; /* 1.2em * 0.7 = 0.84em */
+  margin-bottom: 5px;
+}
+
+.contact-subtitle {
+  color: #333;
+}
+
+.contact-email a {
+  color: #118dbe;
+  font-size: 1.3em; /* 1.5em * 0.7 = 1.05em */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease; /* Añadido color a la transición */
+}
+
+.contact-email a:hover {
+  transform: scale(1.1); /* Aumenta el tamaño del enlace */
+  color: #006f8e; /* Cambia el color del texto al pasar el ratón */
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 0 15px;
+  text-align: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Añade transición para tamaño y opacidad */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Aumenta el tamaño de la imagen */
+  opacity: 0.8; /* Disminuye un poco la opacidad al hacer hover */
+}
+
+.social-label {
+  color: #118dbe;
+  font-size: 1.26em; /* Aumentar el tamaño un 40% más grande (1.26x el tamaño original) */
+  text-decoration: none; /* Quita la línea de los enlaces */
+  transition: color 0.3s ease, transform 0.3s ease; /* Añade una transición suave */
+}
+
+.social-label:hover {
+  color: #005f7f; /* Cambia el color cuando se pasa el ratón (puedes ajustar el color según prefieras) */
+  transform: scale(1.1); /* Aumenta el tamaño ligeramente al pasar el ratón */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

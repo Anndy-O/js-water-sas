@@ -1,0 +1,14 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+.animate-section {
+  transition: transform 0.8s ease-out;
+  transform: translateY(-8px);
+  padding-bottom: 50px;
+}
+
+.animate-section:target {
+  transform: translateY(0);
+}

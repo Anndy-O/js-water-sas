@@ -1,0 +1,38 @@
+<section aria-labelledby="projects-section">
+  <h1 id="projects-section" class="section-title">Proyectos</h1>
+
+  <div class="carousel">
+    <div class="carousel-container">
+      <button class="carousel-arrow left-arrow" (click)="moveLeft()">❮</button>
+
+      <div class="carousel-track">
+        <article class="card" *ngFor="let project of projects; let i = index"
+          [ngClass]="{'center': i === currentIndex, 'next': i === currentIndex + 1, 'prev': i === currentIndex - 1}">
+          <!-- Parte Frontal -->
+          <div class="card-side card-front">
+            <figure class="images">
+              <img src="{{ project.images.rectangular }}" alt="Vista rectangular del proyecto {{ project.title }}"
+                class="rectangular-img" width="300" height="200" />
+              <img src="{{ project.images.circular }}" alt="Vista circular del proyecto {{ project.title }}"
+                class="circular-img" width="150" height="150" />
+            </figure>
+            <h2 id="project-{{ i }}" class="card-title">{{ project.title }}</h2>
+          </div>
+
+          <!-- Parte Trasera -->
+          <div class="card-side card-back">
+            <h2 class="card-title">{{ project.title }}</h2>
+            <h3 class="card-subtitle">{{ project.subtitle }}</h3>
+            <ul class="details-list">
+              <li><span class="bullet"></span>{{ project.details.direccion }}</li>
+              <li><span class="bullet"></span>{{ project.details.contratante }}</li>
+              <li><span class="bullet"></span>{{ project.details.fecha }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <button class="carousel-arrow right-arrow" (click)="moveRight()">❯</button>
+    </div>
+  </div>
+</section>
