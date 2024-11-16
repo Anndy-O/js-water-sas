@@ -9,8 +9,8 @@
         "fecha": "julio 2019"
       },
       "images": {
-        "rectangular": "assets/images/projects/nobori_torre_rectangular.png",
-        "circular": "assets/images/projects/nobori_torre_circular.png"
+        "rectangular": "assets/images/projects/nobori-v1.jpg",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -22,8 +22,8 @@
         "fecha": "2018 - 2020"
       },
       "images": {
-        "rectangular": "assets/images/projects/mukava_rectangular.png",
-        "circular": "assets/images/projects/mukava_circular.png"
+        "rectangular": "assets/images/projects/mukava-v1.png",
+        "circular": "assets/images/projects/mukava-v2.webp"
       }
     },
     {
@@ -35,8 +35,8 @@
         "fecha": "2014 - 2017"
       },
       "images": {
-        "rectangular": "assets/images/projects/galatea_rectangular.png",
-        "circular": "assets/images/projects/galatea_circular.png"
+        "rectangular": "assets/images/projects/portal_llano_rectangular.png",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -48,8 +48,8 @@
         "fecha": "2018 - 2021"
       },
       "images": {
-        "rectangular": "assets/images/projects/mirador_pradera_rectangular.png",
-        "circular": "assets/images/projects/mirador_pradera_circular.png"
+        "rectangular": "assets/images/projects/portal_llano_rectangular.png",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -61,8 +61,8 @@
         "fecha": "2019 - 2021"
       },
       "images": {
-        "rectangular": "assets/images/projects/boreal_rectangular.png",
-        "circular": "assets/images/projects/boreal_circular.png"
+        "rectangular": "assets/images/projects/portal_llano_rectangular.png",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -74,21 +74,8 @@
         "fecha": "2019 - 2021"
       },
       "images": {
-        "rectangular": "assets/images/projects/montebonito_rectangular.png",
-        "circular": "assets/images/projects/montebonito_circular.png"
-      }
-    },
-    {
-      "title": "PORTAL DE LLANO GRANDE ETP 2",
-      "subtitle": "REDES HIDROSANITARIAS - Y URBANISMO",
-      "details": {
-        "direccion": "Parque Industrial Pereira, Risaralda",
-        "contratante": "Q-bica constructora s.a.s",
-        "fecha": "2014"
-      },
-      "images": {
         "rectangular": "assets/images/projects/portal_llano_rectangular.png",
-        "circular": "assets/images/projects/portal_llano_circular.png"
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -100,8 +87,8 @@
         "fecha": "2014 - 2015"
       },
       "images": {
-        "rectangular": "assets/images/projects/giralda_rectangular.png",
-        "circular": "assets/images/projects/giralda_circular.png"
+        "rectangular": "assets/images/projects/portal_llano_rectangular.png",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -113,8 +100,8 @@
         "fecha": "2017"
       },
       "images": {
-        "rectangular": "assets/images/projects/campinas_alcala_rectangular.png",
-        "circular": "assets/images/projects/campinas_alcala_circular.png"
+        "rectangular": "assets/images/projects/portal_llano_rectangular.png",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     },
     {
@@ -126,8 +113,8 @@
         "fecha": "2018 - 2019"
       },
       "images": {
-        "rectangular": "assets/images/projects/porvenir_rectangular.png",
-        "circular": "assets/images/projects/porvenir_circular.png"
+        "rectangular": "assets/images/projects/portal_llano_rectangular.png",
+        "circular": "assets/images/projects/nobori-v2.jpg"
       }
     }
   ]
