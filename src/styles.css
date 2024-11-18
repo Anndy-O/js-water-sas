@@ -1,21 +1,38 @@
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%; /* Asegura que se expanda en cualquier pantalla */
+  overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(3px);
+    transform: translateY(3px); /* Movimiento inicial */
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0); /* Estado final */
   }
 }
 
 .page-load {
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp 1s ease-out; /* Animación conservada */
+  max-width: 100%; /* Escala en cualquier dispositivo */
+  height: auto; /* Asegura proporciones correctas */
+  display: block; /* Compatible con navegadores antiguos */
+}
+
+/* Ajustes para pantallas móviles y tablets */
+@media (max-width: 768px) {
+  .page-load {
+    animation-duration: 1.5s; /* Animación un poco más lenta en dispositivos más pequeños */
+  }
+}
+
+@media (min-width: 769px) {
+  .page-load {
+    height: 100%; /* Conserva la altura completa en pantallas grandes */
+  }
 }

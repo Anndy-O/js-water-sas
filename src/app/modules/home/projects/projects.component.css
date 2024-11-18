@@ -80,8 +80,20 @@
 }
 
 @media(max-width:850px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reducción de columnas a 2 */
+    gap: 20px; /* Reducir espacio entre tarjetas */
+    padding: 20px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .card {
+    width: 100%; /* La tarjeta ocupará el 100% del ancho disponible */
+    max-width: 300px; /* Se mantiene el tamaño máximo */
+    height: auto; /* Ajuste de altura automática */
+  }
+
   .wave-container::before {
-    height: 65px;
+    height: 65px; /* Ajuste de la ola en pantallas más pequeñas */
   }
 }
 
@@ -129,7 +141,6 @@
   width: 100%;
   margin-top: 10px;
 }
-
 
 .card-back ul {
   list-style-type: none; /* Eliminamos las viñetas */

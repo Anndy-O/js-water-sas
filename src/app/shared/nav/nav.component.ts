@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
+  isMenuActive = false;
 
-  constructor() { }
-
-  ngOnInit() {
+  toggleMenu() {
+    this.isMenuActive = !this.isMenuActive;
   }
 
+  closeMenu() {
+    this.isMenuActive = false;
+  }
 }
