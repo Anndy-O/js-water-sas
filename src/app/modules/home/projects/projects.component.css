@@ -1,3 +1,17 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #118dbe;
+  margin-bottom: 20px;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -8,152 +22,133 @@
 .card {
   position: relative;
   width: 300px; /* Aumentamos la anchura de la tarjeta */
-  height: 350px; /* Aumentamos la altura de la tarjeta */
+  height: 300px; /* Aumentamos la altura de la tarjeta */
   border: 1px solid #ddd;
   border-radius: 10px;
-  overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  perspective: 1000px;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* Sombra para simular profundidad */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+
+  /* Transformaciones para el efecto 3D */
+  transform: translateZ(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-inner {
-  position: relative;
+.card:hover {
+  /* Efecto de flotación */
+  transform: translateZ(10px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-body {
+  right: 0;
+}
+
+.main-image {
   width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  height: 300px; /* Aumentamos la altura de la imagen */
+  object-fit: cover;
   border-radius: 10px;
 }
 
-.card-front {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #fff;
-}
-
-.card-back {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra todos los elementos verticalmente */
-  align-items: center; /* Centra los elementos horizontalmente */
-  padding: 20px;
-  background: #f9f9f9;
-  transform: rotateY(180deg);
-  position: relative; /* Asegura que los elementos dentro puedan posicionarse bien */
-}
-
-.wave-container {
-  height: 18vh;
-  position: relative;
-  overflow: hidden; /* Asegura que el contenido fuera de la caja no se muestre */
-  width: 110%; /* Asegura que la ola ocupe todo el ancho disponible */
-}
-
-.wave-container::before {
-  content: "";
-  width: 100%;
-  height: 200px;
+.logo-image {
   position: absolute;
-  top: 0; /* Alinea la ola al principio */
-  left: 0;
-  background-size: auto;
-  background-repeat: repeat no-repeat;
-  background-position: 20vw top; /* Ajusta la ola para que quede bien posicionada */
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0C22.4434 1 28.9842 4 55 26C94.1849 56 121.997 59 158.5 60C198.5 62 200 46 240 54C280 61 320 91 360 91C400 91 440 61 480 56C520 51 560 71 600 86C640 101 680 111 720 116C760 121 800 121 840 106C880 91 920 61 960 64C1000 66 1040 101 1080 96C1120 91 1127.5 61 1147.5 39C1171.48 13 1185.65 2 1200 2V134H1180C1160 134 1120 134 1080 134C1040 134 1000 134 960 134C920 134 880 134 840 134C800 134 760 134 720 134C680 134 640 134 600 134C560 134 520 134 480 134C440 134 400 134 360 134C320 134 280 134 240 134C200 134 160 134 120 134C80 134 40 134 20 134H0V0Z' fill='%232bb2e7'/></svg>");
-}
-
-@media(max-width:850px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr); /* Reducción de columnas a 2 */
-    gap: 20px; /* Reducir espacio entre tarjetas */
-    padding: 20px; /* Reducir padding en pantallas pequeñas */
-  }
-
-  .card {
-    width: 100%; /* La tarjeta ocupará el 100% del ancho disponible */
-    max-width: 300px; /* Se mantiene el tamaño máximo */
-    height: auto; /* Ajuste de altura automática */
-  }
-
-  .wave-container::before {
-    height: 65px; /* Ajuste de la ola en pantallas más pequeñas */
-  }
-}
-
-.card-front .main-image {
-  width: 100%;
-  height: 180px; /* Aumentamos la altura de la imagen */
-  object-fit: cover;
-}
-
-.card-front .logo-image {
-  position: absolute;
-  top: 130px;
-  right: 70px;
-  width: 60px;
-  height: 60px;
+  top: 147px;
+  right: 3px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 3px solid #118dbe;
+  border: 3px solid #ffffff;
   background: #fff;
+
+  /* Sombra para simular profundidad */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+  transform: translateZ(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-info {
-  text-align: center;
+.logo-image:hover {
+  /* Efecto de flotación */
+  transform: translateZ(10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
-.card-info h2 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: #118dbe; /* Igualamos el color del título frontal con el trasero */
+.card-body {
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  top: 1px;
+  position: absolute;
+  padding: 20px;
+  background: #00000021;;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
 }
 
-.card-back h2 {
-  font-size: 1.35rem; /* Reducción del 10% respecto a 1.5rem */
+.card-body h2 {
+  font-size: 1.40rem; /* Reducción del 10% respecto a 1.5rem */
   color: #118dbe; /* Color azul del título */
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
   width: 100%;
-  margin-top: 30px;
+  font-weight: bold;
 }
 
-.card-back h3 {
+.card-body h3 {
   font-size: 0.9rem; /* Reducción del 10% respecto a 1rem */
-  color: #414141;
+  color: #118dbe;
   margin-bottom: 15px;
   text-align: left;
   width: 100%;
-  margin-top: 10px;
 }
 
-.card-back ul {
+.card-body ul {
   list-style-type: none; /* Eliminamos las viñetas */
   margin: 0;
   padding-left: 0; /* Eliminamos el espacio extra a la izquierda */
   color: #000; /* Color negro para los detalles */
   width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+  font-weight: bold;
 }
 
-.card-back ul li {
+.card-body ul li {
   font-size: 0.9rem;
   margin-bottom: 5px;
-  color: #000; /* Color negro para el texto de los detalles */
+  color: #118dbe; /* Color negro para el texto de los detalles */
   text-align: left; /* Aseguramos que los detalles se alineen a la izquierda */
   width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+}
+
+.card-body strong {
+  color: #000;
+}
+
+@media (max-width: 500px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+    margin-left: 2%;
+  }
+
+  .card {
+    width: 350px; /* La tarjeta ocupará el 100% del ancho disponible */
+    max-width: 350px; /* Se mantiene el tamaño máximo */
+    height: 300px; /* Ajuste de altura automática */
+  }
+
+  .main-image {
+    width: 100%;
+    height: 300px; /* Aumentamos la altura de la imagen */
+    object-fit: cover;
+  }
 }

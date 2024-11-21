@@ -41,3 +41,11 @@
     height: 65px;
   }
 }
+
+@media (max-width: 500px) {
+  .wave-container {
+    height: 5.2vh;
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido fuera de la caja no se muestre */
+  }
+}

@@ -50,6 +50,12 @@ nav ul li a:hover {
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 850px) {
+  nav .logo {
+    position: absolute;
+    left: 0.5rem;
+    top: 1rem;
+  }
+
   nav ul {
     display: none; /* Ocultar el menú por defecto */
     position: absolute;
@@ -79,7 +85,7 @@ nav ul li a:hover {
     color: #fff;
     cursor: pointer;
     position: absolute;
-    right: 2rem; /* Mueve a la derecha */
+    right: 1rem; /* Mueve a la derecha */
     top: 1rem;
   }
 }
@@ -92,5 +98,19 @@ nav ul li a:hover {
 
   nav .menu-toggle {
     display: none; /* Ocultar el icono en pantallas grandes */
+    right: 1rem; /* Mueve a la derecha */
+  }
+}
+
+@media (max-width: 500px) {
+  nav .logo {
+    position: fixed;
+    left: 1rem;
+    transform: translateY(700px);
+  }
+
+  nav .logo img {
+    width: 80px;
+    height: auto;
   }
 }

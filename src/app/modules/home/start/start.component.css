@@ -1,84 +1,39 @@
 .start-hero {
-  background-image: url('../../../../assets/images/landing.jpg'); /* Ajusta la ruta de la imagen */
-  background-size: cover; /* Asegura que la imagen cubra el fondo sin distorsionarse */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Fija la imagen al fondo para evitar el desbordamiento */
+  background-image: url('../../../../assets/images/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   position: relative;
-  width: 100%; /* Asegura que el ancho sea 100% del contenedor */
-  height: 100vh; /* Asegura que la altura sea 100% de la pantalla */
+  width: 100%;
+  height: 100vh;
   display: flex;
-  align-items: center; /* Alinea al centro verticalmente */
+  align-items: center;
   justify-content: center;
-  overflow: hidden; /* Elimina las barras de desplazamiento */
-  margin: 0; /* Asegura que no haya margen extra */
-  padding: 0; /* Elimina padding que pueda causar desbordamiento */
 }
 
-.start-hero::after {
+.wave-container {
+  height: 100vh;
+  background-color: #20B2AA;
+  position: relative;
+}
+
+.wave-container::before {
   content: "";
   width: 100%;
-  height: 97px;
+  height: 168px;
   position: absolute;
   bottom: -0.3%;
   left: 0;
   background-size: auto;
   background-repeat: repeat no-repeat;
-  background-position: 36vw bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  96' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 70L50 66C100 62 200 53 300 36C400 18 500 -7 600 1C700 10 800 53 900 70C1000 88 1100 79 1150 75L1200 70V96H1150C1100 96 1000 96 900 96C800 96 700 96 600 96C500 96 400 96 300 96C200 96 100 96 50 96H0V70Z' fill='%23ffffff'/></svg>");
+  background-position: 17vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0C22.4434 -1 28.9842 2 55 21C94.1849 48 121.997 50 158.5 51C198.5 53 200 39 240 45C280 52 320 78 360 78C400 78 440 52 480 48C520 43 560 61 600 74C640 87 680 96 720 100C760 104 800 104 840 91C880 78 920 52 960 54C1000 56 1040 87 1080 82C1120 78 1127.5 52 1147.5 32C1171.48 10 1185.65 0 1200 0V117H1180C1160 117 1120 117 1080 117C1040 117 1000 117 960 117C920 117 880 117 840 117C800 117 760 117 720 117C680 117 640 117 600 117C560 117 520 117 480 117C440 117 400 117 360 117C320 117 280 117 240 117C200 117 160 117 120 117C80 117 40 117 20 117H0V0.0103865Z' fill='%23ffffff'/></svg>");
 }
 
-@media (max-width: 850px) {
+@media(max-width:850px) {
   .wave-container::before {
-    height: 48.5px;
+    height: 65px
   }
-
-  .start-hero {
-    background-attachment: scroll; /* Evita que el fondo fijo genere problemas en dispositivos móviles */
-    height: auto; /* Ajusta la altura automáticamente para pantallas pequeñas */
-    padding: 20px; /* Añade espacio alrededor del contenido en dispositivos pequeños */
-  }
-
-  .start-hero-title {
-    font-size: 2rem; /* Reduce el tamaño de la fuente del título */
-  }
-
-  .start-hero-subtitle {
-    font-size: 1rem; /* Reduce el tamaño de la fuente del subtítulo */
-  }
-
-  .start-btn {
-    padding: 0.5rem 1.5rem; /* Ajusta el padding de los botones */
-    font-size: 0.9rem; /* Reduce el tamaño del texto del botón */
-  }
-}
-
-@media (min-width: 1200px) {
-  .start-hero {
-    height: 100vh; /* Mantén la altura completa en pantallas grandes */
-  }
-
-  .start-hero-title {
-    font-size: 3rem; /* Aumenta el tamaño de la fuente para pantallas grandes */
-  }
-
-  .start-hero-subtitle {
-    font-size: 1.5rem; /* Aumenta el tamaño del subtítulo para pantallas grandes */
-  }
-
-  .start-btn {
-    padding: 1rem 3rem; /* Ajusta el tamaño de los botones en pantallas grandes */
-    font-size: 1.2rem; /* Aumenta el tamaño del texto de los botones */
-  }
-}
-
-.start-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para resaltar el texto */
 }
 
 .start-hero-content {
@@ -86,41 +41,95 @@
   z-index: 1;
   color: #fff;
   text-align: center;
-  padding: 1rem;
-  margin-top: 1%; /* Ajusta este valor según lo necesites */
 }
 
 .start-hero-title {
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente importada */
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  margin-bottom: 10%;
 }
 
 .start-hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   line-height: 1.4;
+  margin-bottom: 20%;
 }
 
 .start-hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 6rem;
   justify-content: center;
 }
 
 .start-btn {
-  padding: 0.75rem 2rem; /* Aumenta el padding para hacerlo más ovalado */
+  width: 150px;
+  padding: 0.75rem; /* Ajusta el espacio interno */
   font-size: 1rem;
   color: #fff;
   background-color: #118dbe;
   border: none;
-  border-radius: 30px; /* Bordes más redondeados para obtener la forma ovalada */
+  border-radius: 30px;
+  text-align: center; /* Centra el texto en el botón */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none; /* Asegura que el enlace no tenga subrayado */
-  display: inline-block;
+  text-decoration: none;
 }
 
 .start-btn:hover {
   background-color: #0a6e91;
+}
+
+
+@media (max-width: 850px) {
+  .start-hero {
+    background-attachment: scroll;
+    height: auto;
+    padding: 20px;
+  }
+
+  .start-hero-title {
+    font-size: 2rem;
+  }
+
+  .start-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .start-hero {
+    height: 750px; /* Ajusta la altura para contenido dinámico */
+    padding: 20px; /* Espaciado interno en dispositivos pequeños */
+  }
+
+  .start-hero-title {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+    margin-bottom: 30%;
+  }
+
+  .start-hero-subtitle {
+    font-size: 1rem; /* Ajusta el tamaño del subtítulo */
+    margin-bottom: 50%;
+  }
+
+  .start-hero-buttons {
+    gap: 2.2rem;
+  }
+
+  .start-btn {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+    padding: 0.5rem 1rem; /* Reduce el padding en botones */
+  }
+
+  .wave-container::before {
+    height: 180px
+  }
 }

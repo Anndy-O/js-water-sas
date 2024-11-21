@@ -5,7 +5,7 @@ html {
 
 .animate-section {
   transition: transform 0.8s ease-out;
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   padding-bottom: 50px;
 }
 

@@ -59,7 +59,7 @@
 
 .contact-email a {
   color: #118dbe;
-  font-size: 1.3em; /* 1.5em * 0.7 = 1.05em */
+  font-size: 1.1em; /* 1.5em * 0.7 = 1.05em */
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease; /* Añadido color a la transición */
 }
@@ -118,5 +118,50 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-us {
+    margin: 20px auto; /* Reduce ligeramente los márgenes */
+    padding: 10px; /* Mantén un buen espaciado interno */
+    max-width: 90%; /* Reduce el ancho máximo para que se ajuste mejor */
+  }
+
+  .contact-info {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas si es necesario */
+    height: auto; /* Permite que la altura sea dinámica */
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 48%; /* Mantén un diseño horizontal reduciendo el ancho de los elementos */
+    padding: 5px; /* Ajusta el relleno */
+    text-align: center; /* Mantén los textos centrados */
+  }
+
+  .contact-separator {
+    height: 80%; /* Escala la línea vertical para que sea más visible */
+  }
+
+  .page-title {
+    font-size: 1.1em; /* Ajusta el tamaño del título */
+  }
+
+  .contact-title {
+    font-size: 0.9em; /* Escala los subtítulos proporcionalmente */
+  }
+
+  .contact-email a {
+    font-size: 0.7em; /* Ajusta el tamaño del enlace */
+  }
+
+  .social-icon {
+    width: 35px; /* Escala los iconos ligeramente */
+    height: 35px;
+  }
+
+  .social-label {
+    font-size: 1em; /* Escala las etiquetas */
   }
 }

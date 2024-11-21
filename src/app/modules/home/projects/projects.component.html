@@ -1,42 +1,23 @@
-<main>
-  <section class="projects">
-    <div class="projects-grid">
-      <div *ngFor="let project of projects" class="card">
-        <div class="card-inner">
-          <!-- Parte Frontal del Card -->
-          <div class="card-front">
-            <div class="image-container">
-              <img
-                class="main-image"
-                [src]="project.images.rectangular"
-                alt="{{ project.title }}"
-              />
-              <img
-                class="logo-image"
-                [src]="project.images.circular"
-                alt="{{ project.title }} logo"
-              />
-            </div>
-            <div class="card-info">
-              <h2>{{ project.title }}</h2>
-            </div>
-          </div>
+<section class="projects-container">
+  <h2 class="projects-title">Proyectos Destacados</h2>
 
-          <!-- Parte Trasera del Card -->
-          <div class="card-back">
-            <h2>{{ project.title }}</h2>
-            <h3>{{ project.subtitle }}</h3>
-            <ul>
-              <li><strong>Dirección:</strong> {{ project.details.direccion }}</li>
-              <li><strong>Contratante:</strong> {{ project.details.contratante }}</li>
-              <li><strong>Fecha:</strong> {{ project.details.fecha }}</li>
-            </ul>
+  <div class="projects-grid">
+    <div *ngFor="let project of projects" class="card">
 
-            <!-- La ola ahora al final -->
-            <div class="wave-container"></div>
-          </div>
-        </div>
+      <div>
+        <img class="main-image" [src]="project.images.rectangular" alt="{{ project.title }}" />
+        <img class="logo-image" [src]="project.images.circular" alt="{{ project.title }} logo" />
+      </div>
+
+      <div class="card-body">
+        <h2>{{ project.title }}</h2>
+        <h3>{{ project.subtitle }}</h3>
+        <ul>
+          <li><strong>Dirección:</strong> {{ project.details.direccion }}</li>
+          <li><strong>Contratante:</strong> {{ project.details.contratante }}</li>
+          <li><strong>Fecha:</strong> {{ project.details.fecha }}</li>
+        </ul>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>

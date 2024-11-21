@@ -1,108 +1,58 @@
+.about-us-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #118dbe;
+  margin-bottom: 20px;
+}
+
 .about-us {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
-  grid-template-areas:
-    ". ."
-    ". ."
-    ". .";
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: repeat(3, 350px); /* Tres columnas en el contenedor principal */
+  gap: 20px; /* Espacio entre los rectángulos */
   padding: 20px;
+  justify-content: center; /* Centra el grid horizontalmente */
 }
 
 .about-us-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  opacity: 0;
-  transform: translateX(-50%);
-  animation: fadeIn 1s forwards;
-  view-timeline: --scroll;
-}
-
-.about-us-item.left {
-  margin-left: 15%;
-  justify-content: flex-start;
-}
-
-.about-us-item.right {
-  margin-right: 15%;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-rows: auto 1fr; /* Dos filas: imagen arriba, texto abajo */
+  justify-items: center; /* Centra el contenido horizontalmente */
+  width: auto;
+  text-align: center; /* Centra el texto */
+  background-color: #fff; /* Fondo blanco para el rectángulo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra en los bordes */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Relleno dentro del rectángulo */
+  border: 1px solid #ddd; /* Borde ligero */
 }
 
 .about-us-item img {
-  margin-left: 20px;
-  width: 180px; /* Ajustamos el tamaño de la imagen */
+  width: 180px; /* Tamaño de la imagen */
+  margin: 0; /* Sin márgenes adicionales */
 }
 
 .text {
-  max-width: 60%; /* Ajusta el tamaño del texto */
   font-size: 16px;
   line-height: 1.5;
   text-align: justify; /* Justifica el texto */
-  margin: 3%;
+  margin: 0; /* Sin márgenes adicionales */
+  max-width: 250px; /* Ancho máximo del texto */
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.about-us-item:nth-child(1) {
-  animation: fadeInLeft 1s forwards;
-  animation-timeline: --scroll;
-}
-
-.about-us-item:nth-child(4) {
-  animation: fadeInRight 1s forwards;
-  animation-timeline: --scroll;
-}
-
-.about-us-item:nth-child(5) {
-  animation: fadeInLeft 1s forwards;
-  animation-timeline: --scroll;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
 
 @media(max-width: 850px) {
   .about-us {
-    grid-template-columns: 1fr 1fr; /* Para pantallas medianas, mantenemos dos columnas */
-    gap: 15px;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
   }
 
   .about-us-item {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 250px; /* Dos columnas: imagen (1 parte) y texto (2 partes) */
+    align-items: center; /* Centra verticalmente el contenido */
   }
 
   .about-us-item img {
@@ -115,19 +65,34 @@
     max-width: 80%; /* Ampliamos un poco el ancho del texto */
     font-size: 14px;
   }
+
+  .about-us-item.left {
+    direction: ltr; /* Dirección normal: imagen izquierda, texto derecha */
+  }
+
+  .about-us-item.right {
+    direction: rtl; /* Invertir la dirección: texto izquierda, imagen derecha */
+  }
+
+  .about-us-item.right .text {
+    direction: ltr; /* Corrige el texto para que no se invierta */
+  }
+
 }
 
 @media(max-width: 500px) {
   .about-us {
-    grid-template-columns: 1fr; /* Para pantallas más pequeñas, una sola columna */
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
+    justify-content: center;
   }
 
   .about-us-item {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    align-items: center; /* Centra verticalmente el contenido */
   }
 
   .about-us-item img {
@@ -139,5 +104,17 @@
   .text {
     max-width: 90%; /* Aumentamos el ancho del texto */
     font-size: 12px;
+  }
+
+  .about-us-item.left {
+    direction: ltr; /* Dirección normal: imagen izquierda, texto derecha */
+  }
+
+  .about-us-item.right {
+    direction: rtl; /* Invertir la dirección: texto izquierda, imagen derecha */
+  }
+
+  .about-us-item.right .text {
+    direction: ltr; /* Corrige el texto para que no se invierta */
   }
 }
