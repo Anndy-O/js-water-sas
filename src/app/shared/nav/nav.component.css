@@ -106,7 +106,7 @@ nav ul li a:hover {
   nav .logo {
     position: fixed;
     left: 1rem;
-    transform: translateY(700px);
+    transform: translateY(630px);
   }
 
   nav .logo img {
